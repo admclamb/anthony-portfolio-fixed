@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Anthony Mclamb Software engineer website"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@0;1&family=Roboto:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/navbar.css" />
+    <link rel="stylesheet" href="../projects.css" />
+    <!-- End CSS -->
+    <script
+      src="https://kit.fontawesome.com/ca5ff7f812.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Anthony Mclamb | Weatherly</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar border-bottom muted">
+        <div class="container">
+          <div class="logo">
+            <a href="/">
+              <h1
+                class="navbar-logo nav-item p-1 ps-md-5 pe-md-5 pb-3 pt-3 nav-color nav-color-red"
+              >
+                AM
+              </h1>
+            </a>
+          </div>
+          <div class="nav-links">
+            <a
+              href="../../about.html"
+              class="nav-item about active p-1 ps-md-5 pe-md-5 pb-3 pt-3 nav-color nav-color-red"
+            >
+              About
+            </a>
+            <a
+              href="../../work.html"
+              class="nav-item work p-1 ps-md-5 nav-color pe-md-5 pb-3 pt-3 nav-color-yellow"
+            >
+              Work
+            </a>
+            <a
+              href="../../blog.html"
+              class="nav-item blog p-1 ps-md-5 nav-color pe-md-5 pb-3 pt-3 nav-color-blue"
+            >
+              Blog
+            </a>
+            <a
+              href="../../contact.html"
+              class="nav-item contact p-1 ps-md-5 pe-md-5 pb-3 pt-3 nav-color nav-color-purple"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+      <section class="hero d-flex justify-content-center align-items-center">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <h2 class="text-light">Weatherly</h2>
+        </div>
+      </section>
+    </header>
+    <main class="container mt-5">
+      <h3 class="mt-3 mb-1">Weatherly</h3>
+      <p class="text-muted text-sm mb-3">V2.0.0</p>
+      <article>
+        <article>
+          <p class="text-container-75">
+            Weatherly is a responsive website MOCK application that gives real
+            world and real time weather data. This application uses OpenWeather
+            API, GeoLocation API, and NewsData.io API to get a users location
+            and conditionally display the features. Weatherly uses React Hooks
+            and React state to manage all the data going through the application
+            and renders the app depending on location, weather, etc.
+          </p>
+        </article>
+        <article>
+          <h3 class="mt-5 mb-3">What I've Learned 🎓</h3>
+          <p class="text-container-75">
+            This application has taught me a lot about React state management,
+            how to handle mutltiple api calls, and how to manage a large flow of
+            data throughout the application. I originally had difficulty with
+            typeErrors and handling data that was not defined by an API and
+            conditionally render without errors. I also had to fix the
+            application as browsers and the real world (non-development)
+            websites can be and it helped me learn a more efficient way to
+            debug.
+          </p>
+        </article>
+
+        <div class="links mt-4 mb-5">
+          <a
+            href="https://your-weather-2.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-lg btn-outline-dark"
+            >Website <i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+          <a
+            href="https://github.com/admclamb/your-weather2"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-lg ms-3 btn-dark"
+            >Code <i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+      </article>
+
+      <section class="container p-0 d-flex flex-column align-items-center mt-5">
+        <h3 class="mb-4">Gallery</h3>
+        <img
+          src="./images/weatherlyNoWeather.png"
+          alt="Weatherly App no weather search"
+          width="100%"
+          class="mb-4 border project-img"
+        />
+        <img
+          src="./images//weatherlyHomePage.png"
+          alt="Weatherly App homepage default weather"
+          width="100%"
+          class="mb-4 border project-img"
+        />
+        <div class="mobile-views mb-4">
+          <h3 class="text-center mt-4 mb-4">Mobile View</h3>
+          <div
+            class="d-flex flex-column flex-md-row align-items-md-stretch justify-content-md-center align-items-center"
+          >
+            <img
+              src="./images/weatherlyNoWeatherMobile.png"
+              alt="Weatherly App no weather mobile view"
+              height="90%"
+              class="me-md-3 mb-5 mb-md-0 border"
+            />
+            <img
+              src="./images/weatherlyHomepageMobile.png"
+              alt="Weatherly App Homepage weather mobile view"
+              height="90%"
+              class="me-md-3 mb-5 mb-md-0 border"
+            />
+            <img
+              src="./images/weatherly8DayMobile.png"
+              alt="Weatherly App 8 Day weather mobile view"
+              height="90%"
+              class="me-md-3 mb-5 mb-md-0 border"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div
+        class="socials d-flex justify-content-center align-items-center p-4 bg-purple text-light"
+      >
+        <a
+          href="https://github.com/admclamb"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-github me-3 fa-2x"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/anthony-mclamb-4bbb25208/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-linkedin-in me-3 fa-2x"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100074782262885"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-facebook-f me-3 fa-2x"></i
+        ></a>
+      </div>
+      <div
+        class="cc bg-dark p-4 text-light d-flex justify-content-center align-items-center"
+      >
+        <p>Website made with <span class="text-danger">❤</span></p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

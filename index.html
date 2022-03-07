@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Anthony Mclamb Software engineer website"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@0;1&family=Roboto:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <!-- End CSS -->
+    <script
+      src="https://kit.fontawesome.com/ca5ff7f812.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Anthony Mclamb | Welcome</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar border-bottom muted">
+        <div class="container">
+          <div class="logo">
+            <a href="/">
+              <h1
+                class="navbar-logo nav-item p-1 ps-md-5 pe-md-5 pb-3 pt-3 nav-color nav-color-red "
+              >
+                AM
+              </h1>
+            </a>
+          </div>
+          <div class="nav-links">
+            <a
+              href="about.html"
+              class="nav-item about active p-1 ps-md-5 pe-md-5 pb-3 pt-3 nav-color nav-color-red"
+            >
+              About
+            </a>
+            <a
+              href="work.html"
+              class="nav-item work p-1 ps-md-5 nav-color pe-md-5 pb-3 pt-3 nav-color-yellow"
+            >
+              Work
+            </a>
+            <a
+              href="blog.html"
+              class="nav-item blog p-1 ps-md-5 nav-color pe-md-5 pb-3 pt-3 nav-color-blue"
+            >
+              Blog
+            </a>
+            <a
+              href="contact.html"
+              class="nav-item contact p-1 ps-md-5 pe-md-5 pb-3 pt-3 nav-color nav-color-purple"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+      <section class="hero d-flex justify-content-center align-items-center">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <h2 class="text-light">Anthony Mclamb</h2>
+          <p class="text-muted">Developer</p>
+          <a href="about.html" class="btn btn-lg btn-outline-light"> About Me </a>
+        </div>
+      </section>
+    </header>
+    <div class="container">
+      <main class="row">
+        <section class="col-12 col-md-8 pt-4">
+          <p class="text-muted mb-3">Latest Blog Post</p>
+          <article>
+            <h3>My Skill Progression Pre / Post Boot Camp</h3>
+            <h5 class="text-muted mt-3 mb-3">March, 7, 2022</h5>
+            <p class="text-container-75">
+              With April coming and coming near to the end of my coding boot camp in Thinkful, I have recently reviewed my previous projects, and one sticks out in particular. This application was made prior to the Boot Camp right when I just learned JavaScript and it meant a lot to me as it was my first REAL project. I decided to remake this application post boot camp...
+            </p>
+            <a href="blog.html" class="btn btn-lg btn-outline-dark">Read More</a>
+            <hr class="mb-5 mt-5 text-container-75"></hr>
+          </article>
+          <article>
+            <h3>Indexing into .indexOf() in JavaScript</h3>
+            <h5 class="text-muted mt-3 mb-3">Feb, 5, 2022</h5>
+            <p class="text-container-75">
+              Any JavaScript developer has used .indexOf() somepoint in their career / Journey. From finding indexes in arrays to creating a binary search .indexOf(), it has had great purpose to me. Recently, I have found an interesting feature where one can get the index of a substring in a larger string by passing the substring in .indexOf()...
+            </p>
+            <a href="blog.html" class="btn btn-lg btn-outline-dark">Read More</a>
+            <hr class="mb-5 mt-5 text-container-75"></hr>
+          </article>
+
+        </section>
+        <aside class="col-12 col-md-4 pt-4">
+          <p class="">Selected Projects</p>
+          <section class="projects">
+            <div class=" project project-yellow p-4 d-flex flex-column bg-dark text-light">
+              <p class="mt-auto">Weatherly</p>
+              <div>
+                <a href="work.html" class="btn btn-outline-light">Learn More</a>
+              </div>
+              
+            </div>
+            <div class=" project bg-info p-4 d-flex flex-column text-dark">
+              <p class="mt-auto">Card-O-Matic</p>
+              <div>
+                <a href="work.html" class="btn btn-outline-dark">Learn More</a>
+              </div>
+            </div>
+            <div class=" project project-red p-4 d-flex flex-column bg-primary">
+              <p class="mt-auto text-light">We Love Movies</p>
+              <div>
+                <a href="work.html" class="btn btn-outline-light">Learn More</a>
+              </div>
+            </div>
+          </section>
+          <p class=" mt-4">Related Links</p>
+          <section class="links d-flex flex-column align-items-start">
+            <a href="work.html" class="text-muted">
+              my projects
+            </a>
+            <a href="#" class="text-muted">
+              my github
+            </a>
+          </section>
+        </aside>
+      </main>
+    </div>
+    <footer>
+      <div
+        class="socials d-flex justify-content-center align-items-center p-4 bg-purple text-light"
+      >
+        <a
+          href="https://github.com/admclamb"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-github me-3 fa-2x"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/anthony-mclamb-4bbb25208/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-linkedin-in me-3 fa-2x"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100074782262885"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-facebook-f me-3 fa-2x"></i
+        ></a>
+      </div>
+      <div
+        class="cc bg-dark p-4 text-light d-flex justify-content-center align-items-center"
+      >
+        <p>Website made with <span class="text-danger">❤</span></p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    
+  </body>
+</html>

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+/* Resets */
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+p,
+a {
+  font-size: 1.25rem;
+}
+
+.text-sm {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  -webkit-filter: brightness(70%);
+}
+
+a:hover {
+  color: inherit;
+}
+
+.navbar-logo {
+  font-size: 1.563rem;
+}
+
+.text-container-75 {
+  width: 75%;
+}
+
+.text-container-65 {
+  width: 65%;
+}
+
+.tab {
+  tab-size: 2;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Colors */
+
+.bg-purple {
+  background-color: purple;
+}
+
+/* Hero */
+
+.hero {
+  /* No image */
+  background: #333;
+  /* No filter */
+  background-image: url(https://source.unsplash.com/random/?city,night);
+  /* With filter */
+  background-image: linear-gradient(
+    rgba(51, 51, 51, 0),
+    rgba(85, 85, 85, 0.178)
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+}
+
+.project {
+  height: 9rem;
+}
+
+.project-yellow {
+  background: rgb(252, 237, 27);
+  /* background-image: url("https://source.unsplash.com/random/?weather");
+  background-image: url("https://source.unsplash.com/random/?weather"),
+    linear-gradient(rgba(252, 237, 27, 0.397), rgba(252, 237, 27, 0.466)); */
+}
+
+.project-red {
+  background-color: red;
+}
+
+.project-purple {
+  background-color: purple;
+}
