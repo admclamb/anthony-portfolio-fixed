@@ -21,17 +21,17 @@ nav-links .nav-item a {
 }
 
 .nav-color-red:hover {
-  border-bottom: 4px solid red;
+  color: red;
 }
 
 .nav-color-yellow:hover {
-  border-bottom: 4px solid rgb(233, 233, 55);
+  color: rgb(233, 233, 55);
 }
 
 .nav-color-blue:hover {
-  border-bottom: 4px solid rgb(0, 153, 255);
+  color: rgb(0, 153, 255);
 }
 
 .nav-color-purple:hover {
-  border-bottom: 4px solid purple;
+  color: purple;
 }
