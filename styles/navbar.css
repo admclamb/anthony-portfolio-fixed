@@ -16,22 +16,26 @@ nav-links .nav-item a {
   border-bottom: 4px solid rgba(255, 255, 255, 0);
 }
 
+.navbar-logo:hover {
+  color: var(--color-tri);
+}
+
 .nav-color:hover {
   filter: none;
 }
 
-.nav-color-red:hover {
-  color: red;
+.nav-about:hover {
+  color: var(--color-main);
 }
 
-.nav-color-yellow:hover {
-  color: rgb(233, 233, 55);
+.nav-work:hover {
+  color: var(--color-main);
 }
 
-.nav-color-blue:hover {
-  color: rgb(0, 153, 255);
+.nav-blog:hover {
+  color: var(--color-main);
 }
 
-.nav-color-purple:hover {
-  color: purple;
+.nav-contact:hover {
+  color: var(--color-main);
 }

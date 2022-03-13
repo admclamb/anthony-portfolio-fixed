@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-main: #573391;
+  --color-sec: #357c3c;
+  --color-tri: #ef6d6d;
+  --color-qua: #8a7c5b;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -76,8 +83,20 @@ ul {
 
 /* Colors */
 
-.bg-purple {
-  background-color: purple;
+.bg-main {
+  background-color: var(--color-main);
+}
+
+.bg-sec {
+  background-color: var(--color-sec);
+}
+
+.bg-tri {
+  background-color: var(--color-tri);
+}
+
+.text-main {
+  color: var(--color-main);
 }
 
 /* Hero */
