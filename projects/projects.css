@@ -1,3 +1,14 @@
+.project-tag {
+  border-top: solid rgb(207, 207, 207) 2px;
+  border-bottom: solid rgb(207, 207, 207) 2px;
+  border-left: solid rgb(207, 207, 207) 2px;
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.342);
+}
+
+.project-tag-main {
+  border-right: solid var(--color-main) 2px;
+}
+
 @media all and (min-width: 768px) {
   .project-img {
     width: 75%;
