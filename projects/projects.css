@@ -14,7 +14,7 @@
   -moz-border-radius: 7.5px;
   -webkit-border-radius: 7.5px;
   border-radius: 7.5px;
-  background-color: var(--color-main);
+  background-color: var(--color-sec);
 }
 
 @media all and (min-width: 768px) {

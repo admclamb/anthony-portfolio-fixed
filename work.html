@@ -47,13 +47,13 @@
           <div class="nav-links">
             <a
               href="about.html"
-              class="nav-item about active p-1 ps-md-5 pe-md-5 pb-3 pt-3 nav-color nav-about"
+              class="nav-item about p-1 ps-md-5 pe-md-5 pb-3 pt-3 nav-color nav-about"
             >
               About
             </a>
             <a
               href="work.html"
-              class="nav-item work p-1 ps-md-5 nav-color pe-md-5 pb-3 pt-3 nav-work"
+              class="nav-item work p-1 ps-md-5 nav-color pe-md-5 pb-3 pt-3 nav-work active"
             >
               Work
             </a>
@@ -80,69 +80,123 @@
         </div>
       </section>
     </header>
-    <main>
-      <div class="row">
-        <section class="col-12 col-md-6 text-light weatherly-project bg-main">
-          <!-- Background Icons -->
-
-          <!-- #endBackground Icons -->
-          <div class="p-3">
-            <h3 class="mb-1">Weatherly</h3>
-            <p class="mb-3">Weather App</p>
-            <p class="mb-0">Technologies</p>
-            <p class="text-sm">React, Bootstrap, API's</p>
-            <a
-              href="projects/weatherly/weatherly.html"
-              class="btn btn-outline-light"
-              >Learn More</a
-            >
-          </div>
-        </section>
-        <section class="p-4 col-12 col-md-6 bg-info text-dark">
-          <h3 class="mb-2">Card-O-Matic</h3>
-          <p class="mb-0">Flash card application</p>
-          <p class="mb-0">Technologies</p>
-          <p class="text-sm">React, Bootstrap, React Hooks</p>
-          <a
-            href="projects/flash-card-app/flash-card-app.html"
-            class="btn btn-outline-dark"
-            >Learn More</a
-          >
-        </section>
-      </div>
-      <div class="row">
-        <section
-          class="col-12 col-md-6 text-light weatherly-project bg-primary"
-        >
-          <div class="p-3">
-            <h3 class="mb-1">We Love Movies</h3>
-            <p class="mb-3">Backend Movie Application</p>
-            <p class="mb-0">Technologies</p>
-            <p class="text-sm">
-              Node.js, PostgreSQL, JavaScript, Backend, Knex, Jest
+    <div class="container">
+      <main class="row">
+        <section class="col-12 col-md-8 pt-4">
+          <article class="project">
+            <h3 class="mb-3">Weatherly</h3>
+            <p class="text-container-95 mb-2">
+              Weatherly is a responsive website MOCK application that gives real
+              world and real time weather data. This application uses
+              OpenWeather API, GeoLocation API, and NewsData.io API to get a
+              users location and conditionally display the features. Weatherly
+              uses React Hooks and React state to manage all the data going
+              through the application and renders the app depending on location,
+              weather, etc.
             </p>
-            <a
-              href="projects/we-love-movies/we-love-movies.html"
-              class="btn btn-outline-light"
-              >Learn More</a
-            >
-          </div>
+            <h4>Technologies</h4>
+            <div class="technologies d-flex">
+              <p class="me-3">HTML</p>
+              <p class="me-3">CSS</p>
+              <p class="me-3">JavaScript</p>
+              <p class="me-3">React</p>
+              <p class="me-3">React Hooks</p>
+              <p class="me-3">API's</p>
+            </div>
+            <div class="links mb-5">
+              <a
+                href="projects/weatherly/weatherly.html"
+                class="btn btn-lg btn-outline-dark"
+                >Learn More<i
+                  class="ms-3 fa-solid fa-arrow-up-right-from-square"
+                ></i
+              ></a>
+            </div>
+            <hr class="mb-5 mt-5 text-container-95"></hr>
+          </article>
+          <article class="project">
+            <h3 class="mb-3">Card-O-Matic</h3>
+            <p class="text-container-95 mb-2">
+              Card-O-Matic is a flash card application similiar to QuizUp where
+            users can study there flashcards. This application was made with
+            front end technologies like React, JavaScript, and Bootstrap 4.
+            </p>
+            <h4>Technologies</h4>
+            <div class="technologies d-flex">
+              <p class="me-3">HTML</p>
+              <p class="me-3">CSS</p>
+              <p class="me-3">JavaScript</p>
+              <p class="me-3">React</p>
+              <p class="me-3">React Hooks</p>
+              <p class="me-3">API's</p>
+            </div>
+            <div class="links mb-5">
+              <a
+                href="projects/flash-card-app/flash-card-app.html"
+                class="btn btn-lg btn-outline-dark"
+                >Learn More<i
+                  class="ms-3 fa-solid fa-arrow-up-right-from-square"
+                ></i
+              ></a>
+            </div>
+            <hr class="mb-5 mt-5 text-container-95"></hr>
+          </article>
+          <article class="project">
+            <h3 class="mb-3">We Love Movies</h3>
+            <p class="text-container-95 mb-2">
+              We Love Movies is a backend application that gathers movie data,
+            critic data, theater data, and reviews data for movies.
+            </p>
+            <h4>Technologies</h4>
+            <div class="technologies d-flex">
+              <p class="me-3">Node.js</p>
+
+              <p class="me-3">JavaScript</p>
+              <p class="me-3">React</p>
+              <p class="me-3">React Hooks</p>
+              <p class="me-3">API's</p>
+            </div>
+            <div class="links mb-5">
+              <a
+                href="projects/we-love-movies/we-love-movies.html"
+                class="btn btn-lg btn-outline-dark"
+                >Learn More<i
+                  class="ms-3 fa-solid fa-arrow-up-right-from-square"
+                ></i
+              ></a>
+            </div>
+            <hr class="mb-5 mt-5 text-container-95"></hr>
+          </article>
         </section>
-        <section class="col-12 col-md-6 text-dark weatherly-project bg-warning">
-          <div class="p-3">
-            <h3 class="mb-3">More applications coming soon...</h3>
-            <p class="mb-1">Check out my smaller projects on my github!</p>
+        <aside class="col-12 col-md-4 pt-4">
+          <p class="">Featured Blog Post</p>
+          <a
+              href="https://github.com/admclamb"
+              class="text-muted border-bottom"
+            >
+            My Skill Progression Pre / Post Boot Camp
+            </a><a
+            href="https://github.com/admclamb"
+            class="text-muted border-bottom"
+          >
+          Indexing into .indexOf() in JavaScript
+          </a>
+          <p class="mt-4">Related Links</p>
+          <section class="links d-flex flex-column align-items-start">
+
             <a
               href="https://github.com/admclamb"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-outline-dark"
-              >Github <i class="fa-brands fa-github"></i
-            ></a>
-          </div>
-        </section>
-      </div>
-    </main>
+              class="text-muted border-bottom"
+            >
+              my github
+            </a>
+          </section>
+        </aside>
+      </main>
+    </div>
+
     <footer>
       <div
         class="socials d-flex justify-content-center align-items-center p-4 bg-purple text-light"
