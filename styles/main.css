@@ -191,3 +191,14 @@ ul {
 .cc {
   background-color: var(--color-darker) !important;
 }
+
+/* Banners */
+
+.banner {
+  background-color: var(--color-darkest);
+  color: #fff;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
