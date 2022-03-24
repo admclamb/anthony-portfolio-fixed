@@ -75,6 +75,17 @@ a:hover {
   width: 65%;
 }
 
+/* Text container media queries */
+@media all and (max-width: 768px) {
+  .text-container-75 {
+    width: 100%;
+  }
+
+  .text-container-65 {
+    width: 100%;
+  }
+}
+
 .tab {
   tab-size: 2;
 }
@@ -159,5 +170,9 @@ ul {
 /* footer */
 
 .socials {
-  background-color: var(--color-darker);
+  background-color: var(--color-dark);
+}
+
+.cc {
+  background-color: var(--color-darker) !important;
 }
