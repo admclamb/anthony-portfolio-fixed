@@ -5,10 +5,14 @@
 }
 
 :root {
-  --color-main: #573391;
+  --color-main: #20a3e0;
+
   --color-sec: #357c3c;
   --color-tri: #ef6d6d;
   --color-qua: #8a7c5b;
+  --color-darkest: rgb(22, 24, 29);
+  --color-darker: #242830;
+  --color-dark: #282c34;
 }
 
 html {
@@ -102,21 +106,34 @@ ul {
   color: var(--color-main);
 }
 
+.bg-dark {
+  background-color: var(--color-dark);
+}
+
+.bg-darker {
+  background-color: var(--color-darker);
+}
+
+.bg-darkest {
+  background-color: var(--color-darkest);
+}
+
 /* Hero */
 
 .hero {
   /* No image */
-  background: #333;
+  /* background: #333; */
   /* No filter */
-  background-image: url(https://source.unsplash.com/random/?city,night);
+  /* background-image: url(https://source.unsplash.com/random/?city,night); */
   /* With filter */
-  background-image: linear-gradient(
-    rgba(51, 51, 51, 0),
-    rgba(85, 85, 85, 0.178)
-  );
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-image: linear-gradient( */
+  /* rgba(51, 51, 51, 0), */
+  /* rgba(85, 85, 85, 0.178) */
+  /* ); */
+  /* background-position: center; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  background-color: var(--color-dark);
   height: 40vh;
 }
 

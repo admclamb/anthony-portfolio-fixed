@@ -3,13 +3,18 @@ nav-links .nav-item a {
 }
 
 .navbar {
+  background-color: var(--color-darker);
+  color: #fff;
   padding-bottom: 0;
   margin-bottom: 0;
-  border-bottom: 4px solid rgb(207, 207, 207) !important;
 }
 
 .nav-item:hover {
-  border-bottom: red 50px;
+  color: red;
+}
+
+.active {
+  color: var(--color-main);
 }
 
 .nav-color {
