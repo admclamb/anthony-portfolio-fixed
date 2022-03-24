@@ -1,12 +1,20 @@
 .project-tag {
-  border-top: solid rgb(207, 207, 207) 2px;
-  border-bottom: solid rgb(207, 207, 207) 2px;
-  border-left: solid rgb(207, 207, 207) 2px;
-  box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.342);
+  border: solid rgb(207, 207, 207) 2px;
+  border-radius: 500px;
+  display: flex;
+  align-items: center;
 }
 
-.project-tag-main {
-  border-right: solid var(--color-main) 2px;
+.project-tag::after {
+  margin-left: 0.7em;
+  content: "";
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background-color: var(--color-main);
 }
 
 @media all and (min-width: 768px) {

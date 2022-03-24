@@ -155,3 +155,9 @@ ul {
 .project-purple {
   background-color: purple;
 }
+
+/* footer */
+
+.socials {
+  background-color: var(--color-darker);
+}
