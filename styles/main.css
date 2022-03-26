@@ -202,3 +202,9 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
+/* Not Found */
+
+.not-found-hero {
+  margin-bottom: 30vh;
+}
