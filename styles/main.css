@@ -5,11 +5,11 @@
 }
 
 :root {
-  --color-main: #24e072;
+  --color-main: #d9ed92;
 
-  --color-sec: #44c9c9;
-  --color-sec-darker: #2d8686;
-  --color-tri: #a12ce4;
+  --color-sec: #52b69a;
+  --color-sec-darker: #34a0a4;
+  --color-tri: #168aad;
   --color-darkest: rgb(22, 24, 29);
   --color-darker: #242830;
   --color-dark: #282c34;
