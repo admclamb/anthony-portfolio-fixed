@@ -85,6 +85,10 @@ a:hover {
   width: 95%;
 }
 
+.flex-wrap > p {
+  margin-bottom: 0.7rem;
+}
+
 /* Text container media queries */
 @media all and (max-width: 768px) {
   .text-container-75 {
