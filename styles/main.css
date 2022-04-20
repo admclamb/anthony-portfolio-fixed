@@ -13,6 +13,7 @@
   --color-darkest: rgb(22, 24, 29);
   --color-darker: #242830;
   --color-dark: #282c34;
+  --color-light: #fff;
 }
 
 html {
@@ -44,6 +45,7 @@ h4 {
 p,
 a {
   font-size: 1.25rem;
+  margin-bottom: 0;
 }
 
 .text-sm {
@@ -197,7 +199,7 @@ ul {
 .banner {
   background-color: var(--color-darkest);
   color: #fff;
-  padding: 0.8rem;
+  padding: 0.4rem;
   display: flex;
   justify-content: center;
   align-items: center;

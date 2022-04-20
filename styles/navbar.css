@@ -9,10 +9,6 @@ nav-links .nav-item a {
   margin-bottom: 0;
 }
 
-.nav-item:hover {
-  color: red;
-}
-
 .active {
   color: var(--color-main);
 }
@@ -21,11 +17,23 @@ nav-links .nav-item a {
   border-bottom: 4px solid rgba(255, 255, 255, 0);
 }
 
-.navbar-logo:hover {
-  color: var(--color-tri);
+.navbar-brand:hover {
+  color: var(--color-tri) !important;
+}
+.nav-link,
+.navbar-brand {
+  color: var(--color-light) !important;
+  padding-inline: 1rem !important;
+  padding-block: 0.8rem !important;
+}
+.nav-link:hover {
+  color: var(--color-main) !important;
+}
+.nav-link.active {
+  color: var(--color-main) !important;
 }
 
-.nav-color:hover {
+.nav-link:hover {
   filter: none;
 }
 
@@ -44,3 +52,5 @@ nav-links .nav-item a {
 .nav-contact:hover {
   color: var(--color-main);
 }
+
+/* Using hamburger menu */
