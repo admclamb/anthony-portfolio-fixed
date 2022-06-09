@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Anthony Mclamb Software engineer website"
+    />
+    <!-- Start Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- End Google Fonts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/navbar.css" />
+    <link rel="stylesheet" href="../tutorials.css" />
+    <link rel="stylesheet" href="./jwtTutorial.css">
+    <!-- End CSS -->
+    <!-- Start highlightjs  -->
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script defer src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <!-- End highlightjs -->
+    <script
+      src="https://kit.fontawesome.com/ca5ff7f812.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>JWT Tutorial | Tutorials</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid container-md">
+          <a class="navbar-brand" href="/">Anthony</a>
+          <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="ms-auto"><ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../work.html">Work</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="hero d-flex justify-content-center align-items-center">
+      </section>
+    </header>
+    <main class="container mt-5">
+      <div class="row">
+        <section class="col-12 col-md-8">
+          <article>
+            <h1 class="text-md">User Authentication Tutorial with React, Node.js, Express, and JSON Web Token (JWT)</h1>
+            <h5 class="text-muted mt-2 mb-2 ">Feb, 5, 2022</h5>
+            <div class="author d-flex mb-3">
+              <h5 class="me-2">Author: </h5>
+              <a href="https://github.com/admclamb"
+              target="_blank"
+              rel="noopener noreferrer"><h5 class="border-bottom text-sec-darker">Anthony Mclamb</h5></a>
+            </div>
+            <section class="text-body">
+              <p>In this tutorial, one will learn how to build and implement user authentication into a full stack JavaScript application using React, Node.js, Express, Axios, Knex, PostgreSQL for the database, and <a href="https://jwt.io/" target="_blank" rel="noopener noreferrer" class="border-bottom text-sec-darker">Json Web Token JWT</a>. The 
+                prerequisite for this tutorial is to know a basic understanding of these technologies. This project will work with different tech stacks, because the main focus will be JWT.
+              </p>
+              <h3 id="what-is-jwt">What is JSON Web Token</h3>
+              <p>Before getting into the tutorial, a decent understanding of JWT will make the implementation of JWT easier. JSON web token or (JWT) for short is a self-contained way for securely transmitting information between parties as JSON Objects. The benefits of JWT is the compact nature, security, ease of process, and the lrage amount of JSON parsers that makes it easier to work with.</p>
+              <div class="tutorial-img img-border border p-2">
+                <img src="./images/JWT-diagram.svg" alt="JSON Web token lifecycle diagram" width="100%"/>
+              </div>
+              <h3 id="project-overview">Tutorial Project Overview</h3>
+              <p>For this project we will be making a full stack chat messaging project that allows users to chat publically with anyone being able to see the messages. Furthermore, the application will be implementing moderators to delete messages. </p>
+              <h3 id="project-file-structure">Back End File Structure</h3>
+              <p>This is the directory for our Node.js Express application</p>
+              <div class="tutorial-img">
+                <img src="./images/backend-file-structure.png" alt="backend file structure" />
+              </div>
+              <p>The overall file structure of each directory has a controller file to handle state of an API, a router to handle modular middleware and routing system, and a service file to handle queries to a database</p>
+              <ul class="ul-with-line">
+                <li>
+                  auth
+                  <ul class="ul-with-circle">
+                    <li><em>auth.controller.js</em>: state management for authentication</li>
+                    <li><em>auth.router.js</em>: Routes for auth</li>
+                    <li><em>authJWT.js</em></li>
+                  </ul>
+                </li>
+                <li>
+                  errors
+                  <ul class="ul-with-circle">
+                    <li><em>asyncErrorBoundary.js</em>: function that handles async functions in controller dependencies</li>
+                    <li><em>errorHandler.js</em>: function that handles errors</li>
+                    <li><em>methodNotAllowed.js</em>: function that does not allow any other requests for a route</li>
+                    <li><em>notFound.js</em>: function for when a route isn't found</li>
+                  </ul>
+                </li>
+                <li>
+                  login
+                  <ul class="ul-with-circle">
+                    <li><em>login.controller.js</em>: GET user information and validate user</li>
+                    <li><em>login.router.js</em></li>
+                    <li><em>login.service.js</em></li>
+                  </ul>
+                </li>
+                <li>
+                  message
+                  <ul class="ul-with-circle">
+                    <li><em>message.controller.js</em>: GET, POST, DELETE, MESSAGES of application</li>
+                    <li><em>message.router.js</em></li>
+                    <li><em>message.service.js</em></li>
+                  </ul>
+                </li>
+                <li>
+                  register
+                  <ul class="ul-with-circle">
+                    <li><em>register.controller.js</em>: POST user and validate new user</li>
+                    <li><em>register.router.js</em></li>
+                    <li><em>register.service.js</em></li>
+                  </ul>
+                </li>
+                <li>
+                  user
+                  <ul class="ul-with-circle">
+                    <li><em>user.controller.js</em></li>
+                    <li><em>user.router.js</em></li>
+                    <li><em>user.service.js</em></li>
+                  </ul>
+                </li>
+                <li><em>app.js</em></li>
+                <li><em>server.js</em></li>
+              </ul>
+              <h3 id="create-node-js-app">Create Node.js App</h3>
+              <p>First, things first, we need to create a directory/folder for our project:</p>
+              <pre>
+                <code>
+                  $ mkdir backend
+                  $ cd backend
+                  $ npm init
+                </code>
+              </pre>
+              <p>After we initialize the npm package, we will need to download the following dependencies</p>
+              <pre>
+                <code>
+                  $ npm i bcryptjs cors dotenv express jsonwebtoken knex pg --save
+                </code>
+              </pre>
+              <p>After this our package json file should look like this:</p>
+              <div class="tutorial-img">
+                <img src="./images/jwt-tutorial-package.json-backend.png" alt="package.json file for jwt project" />
+              </div>
+              <p>This is our server.js file:</p>
+              <pre>
+                <code>
+        server.js
+
+        const { PORT = 5000 } = process.env;
+
+        const app = require("./app");
+        const knex = require("./db/connection");
+                  
+        knex.migrate
+          .latest()
+          .then((migrations) => {
+            console.log("migrations", migrations);
+            app.listen(PORT, listener);
+          })
+          .catch((error) => {
+            console.error(error);
+            knex.destroy();
+          });
+                  
+          function listener() {
+            console.log(`Listening on Port ${PORT}!`);
+          }
+                </code>
+              </pre>
+              <p>In our server.js file we are reqiuring the port from our enviroment variables and if there isn't an enviroment variable for PORT we are default it to 5000. We are then requiring app from the code we will be writing afterwards. After this, we are using knex to handle migrations when we start our development server and handling errors. After this, we will write our app.js file as</p>
+              <pre>
+                <code class="language-javascript">
+        app.js
+
+        const path = require('path');
+        require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
+
+        const express = require('express');
+        const cors = require('cors');
+        const errorHandler = require('./errors/errorHandler');
+        const notFound = require('./errors/notFound');
+
+        const app = express();
+
+        app.use(cors());
+
+        app.use(express.json());
+        app.use(notFound);
+        app.use(errorHandler);
+
+        module.exports = app;
+
+                </code>
+              </pre>
+              <p>We are then letting express create the rest apis and using cors as a middleware function. We have also included a notfound middleware function and an errorhandler middleware function for routes not found and to hanlde the res of the errors.</p>
+              <pre>
+                <code>
+
+        notFound.js
+
+        function notFound(req, res, next) {
+          next({ status: 404, message: `Path not found: ${req.originalUrl}` });
+        }
+        
+        module.exports = notFound;
+                </code>
+              </pre>
+              <pre>
+                <code>
+        errorHandler.js
+
+        function errorHandler(error, request, response, next) {
+          const { status = 500, message = "Something went wrong!" } = error;
+          response.status(status).json({ error: message });
+        }
+                  
+        module.exports = errorHandler;                
+                </code>
+              </pre>
+              <p>After this we will then move to the front end of the application and come back to make the database afterwards.</p>
+              <h3 id="create-react-app">Create React App</h3>
+              <p>For this project we will be using create react app to make our front end easily. First we need to change directories by running the cd command and then create-react-app: </p>
+              <pre>
+                <code>
+        $ cd ..
+        $ npx create-react-app client
+                </code>
+              </pre>
+              <p>Id doesnt matter what name you put for the name of the application, I just used the name client. You can also frontend or something as such.</p>
+            </section>
+
+        </section>
+        <aside class="col-12 col-md-4">
+          <h4 class=" mb-3">Featured Post</h4>
+          <ul>
+            <li><a href="./blog2.html" class="text-muted border-bottom">My Skill Progression Pre / Post Boot Camp</a></li>
+          </ul>
+          <!-- <h4 class="mt-3 mb-3">Categories</h4>
+          <div class="tags d-flex flex-wrap">
+            <p class="tags p-2 border  me-2">React</p>
+            <p class="tags p-2 border  me-2"">JavaScript</p>
+            <p class="tags p-2 border  me-2"">CSS</p>
+          </div> -->
+        </aside>
+      </div>
+      
+    </main>
+    <footer class="mt-4">
+      <div
+        class="socials d-flex justify-content-center align-items-center p-4 bg-purple text-light"
+      >
+        <a
+          href="https://github.com/admclamb"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-github me-3 fa-2x"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/anthony-mclamb-4bbb25208/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-linkedin-in me-3 fa-2x"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100074782262885"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-facebook-f me-3 fa-2x"></i
+        ></a>
+      </div>
+      <div
+        class="cc bg-dark p-4 text-light d-flex justify-content-center align-items-center"
+      >
+        <p>Website made with <span class="text-danger">❤</span></p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

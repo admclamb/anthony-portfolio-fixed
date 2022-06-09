@@ -9,6 +9,8 @@
 
   --color-sec: #52b69a;
   --color-sec-darker: #34a0a4;
+  --color-sec-darkest: #27787a;
+
   --color-tri: #168aad;
   --color-darkest: rgb(22, 24, 29);
   --color-darker: #242830;
@@ -21,7 +23,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
 }
 
@@ -46,6 +48,11 @@ p,
 a {
   font-size: 1.25rem;
   margin-bottom: 0;
+}
+
+blockquote {
+  font-size: 1.25rem;
+  margin: 1rem 0 1rem 1rem;
 }
 
 .text-sm {
@@ -139,6 +146,10 @@ ul {
   color: var(--color-sec-darker);
 }
 
+.text-sec-darker:hover {
+  color: var(--color-sec-darker);
+}
+
 .bg-dark {
   background-color: var(--color-dark);
 }
@@ -213,4 +224,28 @@ ul {
 
 .not-found-hero {
   margin-bottom: 30vh;
+}
+
+/* ul and ol with styles */
+
+.ul-with-line {
+  list-style-type: '- ';
+}
+
+.ul-with-circle {
+  list-style-type: disc;
+  padding-left: 2.5em;
+}
+
+/* CODE BLOCK */
+
+pre {
+  background-color: var(--color-dark);
+  border-radius: 5px;
+  color: var(--color-light);
+  width: 100%;
+  display: block;
+  margin: 0;
+  word-break: break-all;
+  margin-block: 2rem;
 }
