@@ -256,7 +256,41 @@
         $ npx create-react-app client
                 </code>
               </pre>
-              <p>Id doesnt matter what name you put for the name of the application, I just used the name client. You can also frontend or something as such.</p>
+              <p>Id doesnt matter what name you put for the name of the application, I just used the name client. You can also frontend or something as such. For the front end our file structure will look like this.</p>
+              <div class="tutorial-img">
+                <img src="./images/client-file-structure.png" alt="Client file structure" />
+              </div>
+              <p>We will then remove testing and performance checking for the sake of the tutorial. The index.js file will look like this:</p>
+              <pre>
+                <code>
+        index.js
+
+        import React from 'react';
+        import ReactDOM from 'react-dom/client';
+        import './index.css';
+        import App from './App';
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(
+         < React.StrictMode>
+           < App />
+         < /React.StrictMode>
+        );
+
+                </code>
+              </pre>
+              <p>And the App.js file will look like this:</p>
+              <pre>
+                <code>
+        App.js
+
+        function App() {
+          return null;
+         }
+                  
+        export default App;             
+                </code>
+              </pre>
             </section>
 
         </section>
