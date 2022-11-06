@@ -6,16 +6,15 @@
 
 :root {
   --color-main: #d9ed92;
-
   --color-sec: #52b69a;
   --color-sec-darker: #34a0a4;
   --color-sec-darkest: #27787a;
-
   --color-tri: #168aad;
   --color-darkest: rgb(22, 24, 29);
   --color-darker: #242830;
   --color-dark: #282c34;
   --color-light: #fff;
+  --color-gray: rgba(238, 238, 238, 0.863);
 }
 
 html {
@@ -25,6 +24,7 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  font-size: 1.25rem;
 }
 
 /* Resets */
@@ -42,6 +42,10 @@ h3 {
 
 h4 {
   font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
 }
 
 p,
@@ -81,6 +85,7 @@ a:hover {
 
 .text-container-75 {
   width: 75%;
+  margin-bottom: 2rem;
 }
 
 .text-container-65 {
@@ -247,4 +252,10 @@ pre {
   margin: 0;
   word-break: break-all;
   margin-block: 2rem;
+}
+
+.ht {
+  background-color: var(--color-gray);
+  padding: 0.2rem;
+  border-radius: 6px;
 }

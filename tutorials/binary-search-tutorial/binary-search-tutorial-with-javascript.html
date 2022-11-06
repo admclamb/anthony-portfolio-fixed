@@ -27,9 +27,10 @@
     <link rel="stylesheet" href="./jwtTutorial.css">
     <!-- End CSS -->
     <!-- Start highlightjs  -->
-    <link rel="stylesheet"
-    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
-<script defer src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/go.min.js"></script>
     <!-- End highlightjs -->
     <script
       src="https://kit.fontawesome.com/ca5ff7f812.js"
@@ -88,8 +89,97 @@
                 In this article we'll be building a binary search algorithm that'll first be able to search a normal array. Then afterwards, we'll show how to implement the algorithm into a tree data structure.
               </p>
 
-              <p class="text-container-75">First well create a Search class with a static binary method so we will not have to instanciate a Search class to use the method</p>
-              <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@adylanmclamb/Binary-Search-Algorithm#Search.js?embed=true?lite=true"></iframe>
+              <p class="text-container-75">First well create a Search class with a static binary method so we will not have to instanciate a Search class to use the method.</p>
+              <pre class="code">
+                <code class="language-javascript">
+    class Search {
+        static binary(compare, sortedElements) {
+        }
+    }
+                            
+    module.exports = Search
+                </code>
+              </pre>
+              <p class="text-container-75">
+                The static binary method on the Search class will take two arguments, <span class="ht">compare</span>, <span class="ht">sortedElements</span>.
+              </p>
+              <p class="text-container-75">
+                
+              </p>
+
+
+
+
+
+
+
+              <pre class="code">
+                <code class="language-javascript">
+    class Search {
+        /*
+          params: 
+          compare is of type function and provides comparison of elements
+          sortedElements is an array of elements in sorted form
+        */
+        static binary(compare, sortedElements) {
+
+            // check if the elements is of type array
+
+            if (Array.isArray(sortedElements)) {
+
+                // initialize a lower index to the lowest possible index
+
+                let lowerIndex = 0;
+
+                // initialize a higher index to the highest possible value
+
+                let higherIndex = sortedElements.length - 1;
+                  
+                // iterate until the lower index is higher than the higher index which
+                // means there is no instance of the target
+
+                while (lowerIndex <= higherIndex) {
+
+                    // initialize the middle index by calculating from lower 
+                    // and higher index
+
+                    const middleIndex = Math.floor((higherIndex + lowerIndex) / 2);
+                  
+                    // compare the current middle index to the target inside of the
+                    // compare function
+
+                    const comparison = compare(sortedElements[middleIndex]);
+                  
+                    // if the current element is lower than the target
+
+                    if (comparison > 0) {
+                        lowerIndex = middleIndex + 1;
+                    }
+
+                    // if the current element is equal to the target
+
+                    if (comparison === 0) {
+                        return middleIndex;
+                    }
+
+                    // if the current element is higher than the target
+
+                    if (comparison < 0) {
+                        higherIndex = middleIndex - 1;
+                    }
+                }
+            }
+
+            // if there is no target in the element return -1
+
+            return -1;
+        }
+    }
+                  
+                  
+    module.exports = Search
+                </code>
+              </pre>
               <p class="text-container-75">Next we will make a comparison function that takes the target as an argument and returns an anonymous function that'll take an element as an argument that we will be used to compare. When this compare function is called in the binary search it will pass the arguments to the anonymous function thats being returned. This will give us access to the target and keep us from hard coding our comparison so we can add other comparisons later.</p>
               <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@adylanmclamb/Binary-Search-Algorithm#compare.js?embed=true?lite=true"></iframe>
               <p class="text-container-75">Lastly we'll test out our code by created an array of sorted elements and a target then console.log() our index.</p>
